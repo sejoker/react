@@ -118,8 +118,11 @@ var ReactCSSTransitionGroupChild = React.createClass({
     if (this.timeout) {
       clearTimeout(this.timeout);
     }
+
     if (__DEV__) {
-      clearTimeout(this.noEventTimeout);
+      if (this.noEventTimeout) {
+        clearTimeout(this.noEventTimeout);
+      }
     }
   },
 
